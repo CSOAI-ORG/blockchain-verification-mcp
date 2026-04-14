@@ -1,9 +1,31 @@
-author: MEOK AI Labs
-description: Blockchain Verification MCP Server
-license: MIT
 name: blockchain-verification-mcp
-repository: https://github.com/CSOAI-ORG/blockchain-verification-mcp
-tools:
-- description: See server.py
-  name: tool
+description: By **MEOK AI Labs** | https://meok.ai
 version: 1.0.0
+tools:
+- name: mint_certificate
+  description: ''
+  parameters:
+  - name: organization
+    type: string
+    required: true
+  - name: framework
+    type: string
+    required: true
+  - name: scope
+    type: string
+    required: true
+- name: verify_certificate
+  description: ''
+  parameters:
+  - name: certificate_id
+    type: string
+    required: true
+- name: audit_trail
+  description: ''
+  parameters:
+  - name: organization
+    type: string
+    required: true
+- name: integrity_check
+  description: ''
+  parameters: []

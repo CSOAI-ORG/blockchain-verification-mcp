@@ -1,9 +1,69 @@
 {
   "name": "blockchain-verification-mcp",
-  "description": "Blockchain Verification MCP Server by MEOK AI Labs",
+  "description": "By **MEOK AI Labs** | https://meok.ai",
   "version": "1.0.0",
-  "author": "MEOK AI Labs",
-  "license": "MIT",
-  "repository": "https://github.com/CSOAI-ORG/blockchain-verification-mcp",
-  "install": "pip install mcp && python server.py"
+  "tools": [
+    {
+      "name": "mint_certificate",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "organization": {
+            "type": "string"
+          },
+          "framework": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "organization",
+          "framework",
+          "scope"
+        ]
+      }
+    },
+    {
+      "name": "verify_certificate",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "certificate_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "certificate_id"
+        ]
+      }
+    },
+    {
+      "name": "audit_trail",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "organization": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "organization"
+        ]
+      }
+    },
+    {
+      "name": "integrity_check",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  ]
 }

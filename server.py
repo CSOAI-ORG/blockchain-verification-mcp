@@ -14,31 +14,47 @@ def _hash_block(data: str, prev_hash: str) -> str:
 
 @mcp.tool(name="mint_certificate")
 async def mint_certificate(organization: str, framework: str, scope: str, api_key: str = "") -> str:
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     prev = _LEDGER[-1]["hash"] if _LEDGER else "0" * 64
     payload = json.dumps({"org": organization, "framework": framework, "scope": scope, "ts": time.time()})
     h = _hash_block(payload, prev)
     block = {"index": len(_LEDGER), "hash": h, "prev": prev, "data": payload}
     _LEDGER.append(block)
-    return json.dumps({"certificate_id": h[:16], "block_index": block["index"], "status": "minted"})
+    return {"certificate_id": h[:16], "block_index": block["index"], "status": "minted"}
 
 @mcp.tool(name="verify_certificate")
 async def verify_certificate(certificate_id: str, api_key: str = "") -> str:
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     for block in _LEDGER:
         if block["hash"].startswith(certificate_id):
-            return json.dumps({"valid": True, "block_index": block["index"], "data": json.loads(block["data"])})
-    return json.dumps({"valid": False, "error": "Certificate not found"})
+            return {"valid": True, "block_index": block["index"], "data": json.loads(block["data"])}
+    return {"valid": False, "error": "Certificate not found"}
 
 @mcp.tool(name="audit_trail")
 async def audit_trail(organization: str, api_key: str = "") -> str:
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     results = [json.loads(b["data"]) for b in _LEDGER if json.loads(b["data"]).get("org") == organization]
-    return json.dumps({"organization": organization, "events": results})
+    return {"organization": organization, "events": results}
 
 @mcp.tool(name="integrity_check")
 async def integrity_check(api_key: str = "") -> str:
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     for i in range(1, len(_LEDGER)):
         if _LEDGER[i]["prev"] != _LEDGER[i-1]["hash"]:
-            return json.dumps({"valid": False, "broken_at_index": i})
-    return json.dumps({"valid": True, "blocks": len(_LEDGER)})
+            return {"valid": False, "broken_at_index": i}
+    return {"valid": True, "blocks": len(_LEDGER)}
 
 if __name__ == "__main__":
     mcp.run()
