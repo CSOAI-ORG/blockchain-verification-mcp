@@ -24,6 +24,7 @@ def _hash_block(data: str, prev_hash: str) -> str:
 
 @mcp.tool()
 def mint_certificate(organization: str, framework: str, scope: str, api_key: str = "") -> str:
+    """Mint a blockchain-backed certificate with SHA-256 hash chain verification."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -38,6 +39,7 @@ def mint_certificate(organization: str, framework: str, scope: str, api_key: str
 
 @mcp.tool()
 def verify_certificate(certificate_id: str, api_key: str = "") -> str:
+    """Verify a certificate's authenticity by checking its hash chain and signatures."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -50,6 +52,7 @@ def verify_certificate(certificate_id: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def audit_trail(organization: str, api_key: str = "") -> str:
+    """Get the full audit trail for a certificate including all verification events."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -60,6 +63,7 @@ def audit_trail(organization: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def integrity_check(api_key: str = "") -> str:
+    """Run integrity checks on the certificate store to detect tampering or corruption."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}

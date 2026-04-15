@@ -3,7 +3,7 @@ description: MEOK AI Labs MCP Server
 version: 1.0.0
 tools:
 - name: mint_certificate
-  description: ''
+  description: Mint a blockchain-backed certificate with SHA-256 hash chain verification.
   parameters:
   - name: organization
     type: string
@@ -15,17 +15,20 @@ tools:
     type: string
     required: true
 - name: verify_certificate
-  description: ''
+  description: Verify a certificate's authenticity by checking its hash chain and
+    signatures.
   parameters:
   - name: certificate_id
     type: string
     required: true
 - name: audit_trail
-  description: ''
+  description: Get the full audit trail for a certificate including all verification
+    events.
   parameters:
   - name: organization
     type: string
     required: true
 - name: integrity_check
-  description: ''
+  description: Run integrity checks on the certificate store to detect tampering or
+    corruption.
   parameters: []
