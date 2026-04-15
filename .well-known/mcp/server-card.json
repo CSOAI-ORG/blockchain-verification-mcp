@@ -1,0 +1,54 @@
+{
+  "name": "blockchain-verification",
+  "description": "MEOK AI Labs \u2014 Immutable audit trails and certificate verification with SHA-256 hash chains.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/blockchain-verification-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "mint_certificate",
+      "description": "Mint a blockchain-backed compliance certificate with SHA-256 hash chain, merkle root, and metadata."
+    },
+    {
+      "name": "verify_certificate",
+      "description": "Verify a certificate's authenticity by checking hash chain integrity, revocation status, and expiry."
+    },
+    {
+      "name": "audit_trail",
+      "description": "Get the full audit trail for an organization, optionally filtered by framework, with timeline and stats."
+    },
+    {
+      "name": "integrity_check",
+      "description": "Run full integrity check on the certificate ledger \u2014 validates hash chain, content hashes, and merkle tree."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Blockchain & Web3",
+    "Security & Compliance"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
