@@ -1,5 +1,6 @@
 name: blockchain-verification-mcp
-description: MEOK AI Labs MCP Server
+description: MCP server for blockchain verification. Features mint certificate, verify
+  certificate, audit trail. From MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: mint_certificate

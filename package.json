@@ -1,7 +1,7 @@
 {
   "name": "blockchain-verification-mcp",
   "version": "1.0.0",
-  "description": "Blockchain Verification MCP Server by MEOK AI Labs",
+  "description": "MCP server for blockchain verification. Features mint certificate, verify certificate, audit trail. From MEOK AI Labs.",
   "main": "server.py",
   "scripts": {
     "start": "python server.py"
