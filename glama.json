@@ -1,0 +1,10 @@
+{
+  "name": "blockchain-verification-mcp",
+  "description": "MEOK AI Labs \u2014 blockchain-verification-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/blockchain-verification-mcp",
+  "license": "MIT",
+  "runtime": "python",
+  "entryPoint": "mcp-wrapper.py"
+}

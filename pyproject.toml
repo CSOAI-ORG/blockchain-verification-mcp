@@ -22,3 +22,6 @@ Repository = "https://github.com/CSOAI-ORG/blockchain-verification-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 only-include = ["server.py"]
+
+[project.scripts]
+blockchain_verification_mcp = "server:main"
