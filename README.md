@@ -1,52 +1,38 @@
-# Blockchain Verification MCP Server
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Immutable audit trails with SHA-256 hash chain verification for compliance certifications
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/blockchain-verification-mcp)](https://github.com/CSOAI-ORG/blockchain-verification-mcp/stargazers)
+
+# Blockchain Verification Mcp
+
+**Immutable audit trails with SHA-256 hash chain verification for compliance certifications**
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/blockchain-verification-mcp)](https://www.npmjs.com/package/@meok-ai/blockchain-verification-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/blockchain-verification-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install blockchain-verification-mcp
+# or
+npm install -g @meok-ai/blockchain-verification-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-# Run standalone
-python server.py
+See the project repository for full documentation and examples.
 
-# Or via MCP
-mcp install blockchain-verification-mcp
-```
+## Enterprise Support
 
-## Tools
-
-### `mint_certificate`
-Mint a blockchain-backed certificate with SHA-256 hash chain verification.
-
-**Parameters:**
-- `organization` (str): Organization name
-- `framework` (str): Compliance framework
-- `scope` (str): Certificate scope
-
-### `verify_certificate`
-Verify a certificate's authenticity by checking its hash chain and signatures.
-
-**Parameters:**
-- `certificate_id` (str): Certificate identifier
-
-### `audit_trail`
-Get the full audit trail for an organization including all verification events.
-
-**Parameters:**
-- `organization` (str): Organization name
-
-### `integrity_check`
-Run integrity checks on the certificate store to detect tampering or corruption.
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
