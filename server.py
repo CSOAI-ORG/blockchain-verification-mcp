@@ -70,6 +70,15 @@ def mint_certificate(organization: str, framework: str, scope: str,
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        organization (str): The organization to analyze or process.
+        framework (str): The framework to analyze or process.
+        scope (str): The scope to analyze or process.
+        auditor (str): The auditor to analyze or process.
+        valid_years (int): The valid years to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -155,6 +164,11 @@ def verify_certificate(certificate_id: str, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        certificate_id (str): The certificate id to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -228,6 +242,12 @@ def audit_trail(organization: str, framework: str = "", api_key: str = "") -> st
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        organization (str): The organization to analyze or process.
+        framework (str): The framework to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -300,6 +320,11 @@ def integrity_check(deep_scan: bool = False, api_key: str = "") -> str:
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        deep_scan (bool): The deep scan to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
