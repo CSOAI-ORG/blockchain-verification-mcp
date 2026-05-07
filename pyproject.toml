@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "blockchain-verification-mcp"
-version = "1.0.3"
+version = "1.0.4"
 readme = "README.md"
 description = "MCP server for blockchain verification. Features mint certificate, verify certificate, audit trail. From MEOK AI Labs."
 license = {file = "LICENSE"}
