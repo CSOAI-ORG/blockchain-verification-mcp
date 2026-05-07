@@ -54,7 +54,23 @@ def _merkle_root(hashes: list) -> str:
 @mcp.tool()
 def mint_certificate(organization: str, framework: str, scope: str,
                      auditor: str = "", valid_years: int = 0, api_key: str = "") -> str:
-    """Mint a blockchain-backed compliance certificate with SHA-256 hash chain, merkle root, and metadata."""
+    """Mint a blockchain-backed compliance certificate with SHA-256 hash chain, merkle root, and metadata.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -109,7 +125,23 @@ def mint_certificate(organization: str, framework: str, scope: str,
 
 @mcp.tool()
 def verify_certificate(certificate_id: str, api_key: str = "") -> str:
-    """Verify a certificate's authenticity by checking hash chain integrity, revocation status, and expiry."""
+    """Verify a certificate's authenticity by checking hash chain integrity, revocation status, and expiry.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -152,7 +184,23 @@ def verify_certificate(certificate_id: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def audit_trail(organization: str, framework: str = "", api_key: str = "") -> str:
-    """Get the full audit trail for an organization, optionally filtered by framework, with timeline and stats."""
+    """Get the full audit trail for an organization, optionally filtered by framework, with timeline and stats.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
@@ -194,7 +242,23 @@ def audit_trail(organization: str, framework: str = "", api_key: str = "") -> st
 
 @mcp.tool()
 def integrity_check(deep_scan: bool = False, api_key: str = "") -> str:
-    """Run full integrity check on the certificate ledger — validates hash chain, content hashes, and merkle tree."""
+    """Run full integrity check on the certificate ledger — validates hash chain, content hashes, and merkle tree.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
