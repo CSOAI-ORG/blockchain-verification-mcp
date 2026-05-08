@@ -1,45 +1,58 @@
-[![blockchain-verification-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/blockchain-verification-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/blockchain-verification-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/blockchain-verification-mcp)](https://pypi.org/project/blockchain-verification-mcp/)
-
-[![blockchain-verification-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/blockchain-verification-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/blockchain-verification-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/blockchain-verification-mcp)](https://github.com/CSOAI-ORG/blockchain-verification-mcp/stargazers)
+# Blockchain Verification MCP
 
-# Blockchain Verification Mcp
+**MCP server for blockchain verification mcp operations**
 
-**Immutable audit trails with SHA-256 hash chain verification for compliance certifications**
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/blockchain-verification-mcp)](https://www.npmjs.com/package/@meok-ai/blockchain-verification-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-blockchain-verification-mcp)](https://pypi.org/project/meok-blockchain-verification-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/blockchain-verification-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Blockchain Verification MCP provides AI-powered tools via the Model Context Protocol (MCP).
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `mint_certificate` | Mint a blockchain-backed compliance certificate with SHA-256 hash chain, merkle  |
+| `verify_certificate` | Verify a certificate's authenticity by checking hash chain integrity, revocation |
+| `audit_trail` | Get the full audit trail for an organization, optionally filtered by framework,  |
+| `integrity_check` | Run full integrity check on the certificate ledger — validates hash chain, conte |
 
 ## Installation
 
 ```bash
-pip install blockchain-verification-mcp
-# or
-npm install -g @meok-ai/blockchain-verification-mcp
+pip install meok-blockchain-verification-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "blockchain-verification": {
+      "command": "python",
+      "args": ["-m", "meok_blockchain_verification_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 4 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/blockchain-verification-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
