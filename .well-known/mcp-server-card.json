@@ -1,0 +1,25 @@
+{
+  "name": "blockchain-verification-mcp",
+  "title": "Blockchain Verification Mcp",
+  "description": "MCP server for blockchain verification. Features mint certificate, verify certificate, audit trail. From MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "mint_certificate"
+    },
+    {
+      "name": "verify_certificate"
+    },
+    {
+      "name": "audit_trail"
+    },
+    {
+      "name": "integrity_check"
+    }
+  ]
+}

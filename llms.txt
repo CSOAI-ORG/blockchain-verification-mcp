@@ -1,31 +1,33 @@
-# Blockchain Verification MCP
-
-> Blockchain verification MCP — wallet analysis, transaction tracing, smart contract audit, on-chai...
-
-`blockchain-verification-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+# blockchain-verification-mcp
+# **MCP server for blockchain verification mcp operations**
 
 ## Install
-
 ```bash
 pip install blockchain-verification-mcp
 ```
 
-Or run without installing:
-
-```bash
-uvx blockchain-verification-mcp
-```
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
 
 ## Tools
 
-- `mint_certificate` — Mint a blockchain-backed compliance certificate with SHA-256 hash chain, merkle root, and metadata.
-- `verify_certificate` — Verify a certificate's authenticity by checking hash chain integrity, revocation status, and expiry.
-- `audit_trail` — Get the full audit trail for an organization, optionally filtered by framework, with timeline and stats.
-- `integrity_check` — Run full integrity check on the certificate ledger — validates hash chain, content hashes, and merkle tree.
+### `mint_certificate`
+Mint a blockchain-backed compliance certificate with SHA-256 hash chain, merkle root, and metadata.
 
-## Links
+### `verify_certificate`
+Verify a certificate's authenticity by checking hash chain integrity, revocation status, and expiry.
 
-- Source: https://github.com/CSOAI-ORG/blockchain-verification-mcp
-- PyPI: https://pypi.org/project/blockchain-verification-mcp/
-- MEOK AI Labs: https://meok.ai
-- Council of AI: https://councilof.ai
+### `audit_trail`
+Get the full audit trail for an organization, optionally filtered by framework, with timeline and stats.
+
+### `integrity_check`
+Run full integrity check on the certificate ledger — validates hash chain, content hashes, and merkle tree.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

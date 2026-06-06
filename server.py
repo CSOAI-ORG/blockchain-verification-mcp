@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Blockchain Verification MCP Server — Immutable audit trails for compliance certifications."""
+"""
+Blockchain Verification MCP Server — Immutable audit trails for compliance certifications."""
 
 import json, hashlib, time, uuid
 from datetime import datetime, timezone
 from collections import defaultdict
 from mcp.server.fastmcp import FastMCP
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 mcp = FastMCP("blockchain-verification", instructions="MEOK AI Labs — Immutable audit trails and certificate verification with SHA-256 hash chains.")
@@ -96,7 +96,7 @@ def mint_certificate(organization: str, framework: str, scope: str,
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     fw_info = SUPPORTED_FRAMEWORKS.get(framework.lower(), {"name": framework, "category": "Custom", "validity_years": 1})
@@ -186,7 +186,7 @@ def verify_certificate(certificate_id: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     if certificate_id in _REVOCATIONS:
@@ -265,7 +265,7 @@ def audit_trail(organization: str, framework: str = "", api_key: str = "") -> st
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     events = []
@@ -342,7 +342,7 @@ def integrity_check(deep_scan: bool = False, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     if not _LEDGER:
@@ -384,5 +384,8 @@ def integrity_check(deep_scan: bool = False, api_key: str = "") -> str:
     }
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,9 @@
+# blockchain-verification-mcp - Auto-trigger Rules
+
+When the user asks about blockchain verification, use blockchain-verification-mcp tools: mint_certificate, verify_certificate, audit_trail, integrity_check
+
+**MCP server for blockchain verification mcp operations**
+
+Install: `pip install blockchain-verification-mcp`
+
+By MEOK AI Labs — MIT licensed.
