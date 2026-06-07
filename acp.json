@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "blockchain-verification-mcp",
+    "description": "Blockchain Verification MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "blockchain-verification-mcp"
+      }
+    ],
+    "capabilities": [
+      "mint_certificate",
+      "verify_certificate",
+      "audit_trail",
+      "integrity_check"
+    ]
+  }
+}

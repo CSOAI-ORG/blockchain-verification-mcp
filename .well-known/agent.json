@@ -1,0 +1,59 @@
+{
+  "name": "blockchain-verification-mcp",
+  "description": "Blockchain Verification MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/blockchain-verification-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "mint_certificate",
+      "name": "Mint Certificate",
+      "description": "mint_certificate via blockchain-verification-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "verify_certificate",
+      "name": "Verify Certificate",
+      "description": "verify_certificate via blockchain-verification-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "audit_trail",
+      "name": "Audit Trail",
+      "description": "audit_trail via blockchain-verification-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "integrity_check",
+      "name": "Integrity Check",
+      "description": "integrity_check via blockchain-verification-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
