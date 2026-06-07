@@ -1,0 +1,31 @@
+# Blockchain Verification MCP
+
+> Blockchain verification MCP — wallet analysis, transaction tracing, smart contract audit, on-chai...
+
+`blockchain-verification-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+
+## Install
+
+```bash
+pip install blockchain-verification-mcp
+```
+
+Or run without installing:
+
+```bash
+uvx blockchain-verification-mcp
+```
+
+## Tools
+
+- `mint_certificate` — Mint a blockchain-backed compliance certificate with SHA-256 hash chain, merkle root, and metadata.
+- `verify_certificate` — Verify a certificate's authenticity by checking hash chain integrity, revocation status, and expiry.
+- `audit_trail` — Get the full audit trail for an organization, optionally filtered by framework, with timeline and stats.
+- `integrity_check` — Run full integrity check on the certificate ledger — validates hash chain, content hashes, and merkle tree.
+
+## Links
+
+- Source: https://github.com/CSOAI-ORG/blockchain-verification-mcp
+- PyPI: https://pypi.org/project/blockchain-verification-mcp/
+- MEOK AI Labs: https://meok.ai
+- Council of AI: https://councilof.ai
