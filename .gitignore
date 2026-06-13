@@ -4,3 +4,5 @@ __pycache__/
 .dist/
 build/
 
+# Auto-added during alignment sweep
+dist/
