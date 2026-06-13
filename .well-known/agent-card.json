@@ -1,0 +1,96 @@
+{
+  "name": "Blockchain Verification Mcp",
+  "version": "1.0.6",
+  "url": "https://mcp.meok.ai/blockchain-verification-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "MCP server for blockchain verification. Features mint certificate, verify certificate, audit trail. From MEOK AI Labs.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "mint_certificate",
+      "name": "Mint Certificate",
+      "description": "Mint Certificate — a tool of the blockchain-verification-mcp MCP.",
+      "tags": [
+        "audit"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "verify_certificate",
+      "name": "Verify Certificate",
+      "description": "Verify Certificate — a tool of the blockchain-verification-mcp MCP.",
+      "tags": [
+        "audit"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "audit_trail",
+      "name": "Audit Trail",
+      "description": "Audit Trail — a tool of the blockchain-verification-mcp MCP.",
+      "tags": [
+        "audit"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "integrity_check",
+      "name": "Integrity Check",
+      "description": "Integrity Check — a tool of the blockchain-verification-mcp MCP.",
+      "tags": [
+        "audit"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai",
+  "x-meok": {
+    "mcp_name": "blockchain-verification-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}
