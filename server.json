@@ -4,9 +4,9 @@
   "version": "1.0.9",
   "description": "Blockchain Verification MCP Server by MEOK AI Labs",
   "repository": {
-    "type": "git",
     "url": "https://github.com/CSOAI-ORG/blockchain-verification-mcp",
-    "source": "https://github.com/CSOAI-ORG/blockchain-verification-mcp"
+    "source": "github",
+    "id": "1210329872"
   },
   "packages": [
     {
